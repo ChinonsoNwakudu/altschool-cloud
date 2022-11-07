@@ -1,2 +1,2 @@
-# altschool-cloud-exercises
-My Altschool Exercises
+# altschool-cloud
+My Altschool Cloud excersises and exam
