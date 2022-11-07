@@ -1,0 +1,22 @@
+- name: setup server
+    hosts: webservers
+    environment:
+        AWS_ACCESS_KEY_ID: "[Your AWS access key ID]"
+        AWS_SECRET_ACCESS_KEY: "[Your AWS secret access key]"
+    tasks:
+        - name: install packages
+            apt:
+                pkg:
+                    - php7.4-cli
+                    - php-xml
+                    - php-pgsql
+                    - libapache2-mod-php
+                    - apache2
+                    - git
+                    - zip
+                    - unzip
+                    - curl
+                    - php-curl
+        state: latest
+        update_cache: yes
+        become: yes
